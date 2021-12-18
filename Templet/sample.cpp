@@ -21,31 +21,45 @@ void main()
 		{
 		case Add:
 		{
+			win.ClearWindow();
+			win.Title();
 			ctr.AddCharactor();
 			break;
 		}
 		case Draw:
 		{
+			win.ClearWindow();
+			win.Title();
 			ctr.Draw();
+			win.Line();
+			win.Stop();
 			break;
 		}
 		case Delete:
 		{
+			win.ClearWindow();
+			win.Title();
 			ctr.DelCharactor();
 			break;
 		}
 		case Edit:
 		{
+			win.ClearWindow();
+			win.Title();
 			ctr.EditCharactor();
 			break;
 		}
 		case Save:
 		{
+			win.ClearWindow();
+			win.Title();
 			ctr.Save();
 			break;
 		}
 		case Load:
 		{
+			win.ClearWindow();
+			win.Title();
 			ctr.Load();
 			break;
 		}
@@ -58,7 +72,7 @@ void main()
 		default:
 			break;
 		}
+		win.ClearWindow();
 	}
-	
 	
 }

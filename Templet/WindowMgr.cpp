@@ -33,3 +33,11 @@ void WindowMgr::Choice()
 	Line();
 	cout << ">>";
 }
+void WindowMgr::ClearWindow()
+{
+	system("cls");
+}
+void WindowMgr::Stop()
+{
+	system("pause");
+}

@@ -10,5 +10,7 @@ public:
 	void Choice();
 	void eLine();
 	void eDoubleLine();
+	void ClearWindow();
+	void Stop();
 };
 
