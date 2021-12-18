@@ -155,7 +155,7 @@
     <ClCompile Include="FIO.cpp" />
     <ClCompile Include="LinkedList.cpp" />
     <ClCompile Include="Node.cpp" />
-    <ClCompile Include="sample.cpp" />
+    <ClCompile Include="main.cpp" />
     <ClCompile Include="WindowMgr.cpp" />
   </ItemGroup>
   <ItemGroup>
