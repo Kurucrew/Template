@@ -47,9 +47,10 @@ void Control::EditCharactor()
 void Control::Save()
 {
 	file.WriteOpen("test.txt");
-	for (Node<Charactor>* node = list.begin(); node != NULL; node = node->m_Next)
+	Node<Charactor>* node = nullptr;
+	for (node = list.begin(); node->m_Next != NULL; node = node->m_Next)
 		{
-		file.Write(node,sizeof(node));
+		file.Write(node,sizeof(Node<Charactor>));
 		}
 	file.CloseFile();
 }
@@ -57,14 +58,12 @@ void Control::Load()
 {
 	file.ReadOpen("test.txt");
 	Node<Charactor>* node = new Node<Charactor>;
-	node = list.GetHead(node);
-	file.Read(node, sizeof(node));
-	for (data.m_Next = node;data.m_Next->m_Next != NULL;)
+	/*file.Read(node, sizeof(Node<Charactor>));
+	list.PushBack(new Node<Charactor>(node->m_Data));*/
+	for (int i=0;i<4;i++)
 	{
-		file.Read(node, sizeof(node));
-		//list.PushBack(node);
-		data.m_Next->m_Next = node;
-		data.m_Next = node;
+		file.Read(node, sizeof(Node<Charactor>));
+		list.PushBack(new Node<Charactor>(node->m_Data));
 	}
 	file.CloseFile();
 }

@@ -1,25 +1,25 @@
-//#include "ControlMgr.h"
+//#include "controlmgr.h"
 //
-//FILE* ControlMgr::LoadFile()
+//file* controlmgr::loadfile()
 //{
-//	FILE* fpLoad = NULL;
-//	fopen_s(&fpLoad, "test.txt", "rb");
-//	if (fpLoad != NULL)
+//	file* fpload = null;
+//	fopen_s(&fpload, "test.txt", "rb");
+//	if (fpload != null)
 //	{
-//		Student* NewStudent = new Student;
-//		fread(NewStudent, sizeof(Student), 1, fpLoad);
-//		HeadS = NewStudent;
-//		NextP = NewStudent;
+//		student* newstudent = new student;
+//		fread(newstudent, sizeof(student), 1, fpload);
+//		heads = newstudent;
+//		nextp = newstudent;
 //
-//		for (NextP = NewStudent; NextP->m_Next != NULL;)
+//		for (nextp = newstudent; nextp->m_next != null;)
 //		{
-//			Student* NewStudent = new Student;
-//			fread(NewStudent, sizeof(Student), 1, fpLoad);
-//			NextP->m_Next = NewStudent;
-//			NextP = NewStudent;
+//			student* newstudent = new student;
+//			fread(newstudent, sizeof(student), 1, fpload);
+//			nextp->m_next = newstudent;
+//			nextp = newstudent;
 //		}
 //	}
 //	
-//	fclose(fpLoad);
-//	return fpLoad;
+//	fclose(fpload);
+//	return fpload;
 //}

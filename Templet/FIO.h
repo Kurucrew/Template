@@ -7,7 +7,7 @@ public:
 	bool     ReadOpen(const  char* fName);
 	bool     WriteOpen(const  char* fName);
 	void     CloseFile();
-	FILE*   Write(void const* Data, int Size);
-	FILE*   Read(void* Data, int Size);
+	size_t   Write(void const* Data, int Size);
+	size_t   Read(void* Data, int Size);
 };
 

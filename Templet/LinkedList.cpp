@@ -123,3 +123,9 @@ Node<T>* LinkedList<T>::GetHead(Node<T>* data)
 	data = m_Head;
 	return data;
 }
+template<class T>
+Node<T>* LinkedList<T>::SetHead(Node<T>* data)
+{
+	m_Head = data;
+	return m_Head;
+}

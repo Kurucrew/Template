@@ -4,7 +4,6 @@ Node<T>::Node()
 {
 	m_Next = nullptr;
 	m_Prev = nullptr;
-	//m_Val = -1;
 }
 template<class T>
 Node<T>::Node(T Data) : m_Data(Data)
