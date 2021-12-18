@@ -6,6 +6,7 @@ class LinkedList
 	Node<T>* m_Tail;
 	Node<T>* m_Current;
 public:
+	Node<T>* GetHead(Node<T>* data);
 	Node<T>* begin();
 	Node<T>* end();
 	Node<T>* rbegin();

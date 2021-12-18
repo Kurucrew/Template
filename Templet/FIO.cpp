@@ -16,13 +16,13 @@ void FIO::CloseFile()
 	fclose(m_file);
 	m_file = nullptr;
 }
-size_t FIO::Write(void const* Data, int Size)
+FILE* FIO::Write(void const* Data, int Size)
 {
-	size_t size = fwrite(Data, Size, 1, m_file);
-	return size;
+	fwrite(Data, Size, 1, m_file);
+	return nullptr;
 }
-size_t FIO::Read(void* Data, int Size)
+FILE* FIO::Read(void* Data, int Size)
 {
-	size_t size = fread(Data, Size, 1, m_file);
-	return size;
+	 fread(Data, Size, 1, m_file);
+	 return m_file;
 }

@@ -56,11 +56,15 @@ void Control::Save()
 void Control::Load()
 {
 	file.ReadOpen("test.txt");
-	Node<Charactor>* node = list.begin();
+	Node<Charactor>* node = new Node<Charactor>;
+	node = list.GetHead(node);
 	file.Read(node, sizeof(node));
-	for (node->m_Next != NULL; node = node->m_Next;)
+	for (data.m_Next = node;data.m_Next->m_Next != NULL;)
 	{
 		file.Read(node, sizeof(node));
+		//list.PushBack(node);
+		data.m_Next->m_Next = node;
+		data.m_Next = node;
 	}
 	file.CloseFile();
 }

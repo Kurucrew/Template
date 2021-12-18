@@ -117,3 +117,9 @@ Node<T>* LinkedList<T>::find(char value[20])
 		}
 	}
 }
+template<class T>
+Node<T>* LinkedList<T>::GetHead(Node<T>* data)
+{
+	data = m_Head;
+	return data;
+}
