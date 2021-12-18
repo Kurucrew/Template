@@ -111,9 +111,7 @@ Node<T>* LinkedList<T>::find(char value[20])
 {
 	for (Node<T>* node = begin(); node != end(); node = node->m_Next)
 	{
-		int check = 0;
-		check = strcmp(node->m_Data.m_Name, value);
-		if (check ==0)
+		if (!strcmp(node->m_Data.m_Name, value))
 		{
 			return node;
 		}

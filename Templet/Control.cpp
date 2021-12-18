@@ -30,7 +30,7 @@ void Control::Draw()
 }
 void Control::DelCharactor()
 {
-	char name[20];
+	char name[20] = {0, };
 	std::cout << "지우고 싶은 캐릭터 이름을 입력하세요 :";
 	std::cin >> name;
 	Node<Charactor>* find = list.find(name);

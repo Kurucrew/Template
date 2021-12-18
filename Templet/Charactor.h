@@ -4,7 +4,7 @@
 class Charactor
 {
 public:
-	char m_Name[20];
+	char m_Name[20] = {0, };
 	int m_Health;
 	int m_Mana;
 	int m_Stemina;
