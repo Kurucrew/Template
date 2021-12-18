@@ -58,13 +58,11 @@ void Control::Load()
 {
 	file.ReadOpen("test.txt");
 	Node<Charactor>* node = new Node<Charactor>;
-	/*file.Read(node, sizeof(Node<Charactor>));
-	list.PushBack(new Node<Charactor>(node->m_Data));*/
-	for (int i=0;i<4;i++)
+	while (file.Read(node, sizeof(Node<Charactor>)))
 	{
-		file.Read(node, sizeof(Node<Charactor>));
 		list.PushBack(new Node<Charactor>(node->m_Data));
 	}
+	//delete node;
 	file.CloseFile();
 }
 Control::Control()
